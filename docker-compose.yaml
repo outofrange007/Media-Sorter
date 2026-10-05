@@ -1,0 +1,16 @@
+services:
+  media-sorter:
+    build: /opt/media-sorter
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    volumes:
+      - /path-to-sort-directory
+      - /opt/media-sorter/config.json:/app/config.json
