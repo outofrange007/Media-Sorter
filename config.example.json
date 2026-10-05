@@ -1,0 +1,43 @@
+{
+  "MAX_SECONDS_OCR": 3,
+  "MAX_SECONDS_FACE": 3,
+  "FACE_RECOGNITION_THRESHOLD": 0.4,
+  "MIN_VIDEO_FACE_FRAMES": 3,
+  "FACE_UPSAMPLE": 1,
+  "MAX_FRAME_WIDTH": 960,
+  "FACE_MODEL": "cnn",
+  "WEB_BLACKLIST": [
+    "subscribe",
+    "follow",
+    "vip",
+    "preview",
+    "model",
+    "girl",
+    "video",
+    "media",
+    "hd",
+    "hq",
+    "sticker",
+    "img",
+    "mp4",
+    "mov",
+    "mkv",
+    "avi",
+    "webm"
+  ],
+  "STUDIOS": [
+    "Studio One",
+    "Studio Two"
+  ],
+  "SUPPORTED_EXTENSIONS": [
+    "*.mp4",
+    "*.mov",
+    "*.webm",
+    "*.mkv",
+    "*.avi",
+    "*.m4v",
+    "*.jpg",
+    "*.jpeg",
+    "*.png"
+  ]
+}

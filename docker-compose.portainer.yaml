@@ -1,0 +1,30 @@
+services:
+  media-sorter:
+    image: ghcr.io/outofrange007/media-sorter:latest
+    container_name: media-sorter
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - PYTHONUTF8=1
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
+    volumes:
+      # Change this to your media directory
+      - /your/media/path:/your/media/path
+      # Config and scripts are mounted from the host so they can be updated without rebuilding
+      - /opt/media-sorter/config.json:/app/config.json
+      - /opt/media-sorter/web_app.py:/app/web_app.py
+      - /opt/media-sorter/videoocr.py:/app/videoocr.py
+      - /opt/media-sorter/logs:/app/logs
+      - paddle_cache:/root/.paddleocr
+
+volumes:
+  paddle_cache:
