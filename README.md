@@ -16,8 +16,6 @@ An AI-powered tool that automatically sorts media files (videos and images) into
 
 * **Watermark prefix stripping** — cleans third-party repost watermarks embedded in files before using a label as a folder name
 
-* **Studio detection** — separates known studio productions into their own folders (configurable via `config.json`)
-
 * **Streamlit web UI** — browser-based interface to start/stop sorting, monitor progress, and review logs in real time
 
 * **GPU acceleration** — uses NVIDIA GPU via CUDA for faster OCR and face detection (CPU fallback available)
